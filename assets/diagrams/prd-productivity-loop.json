@@ -1,0 +1,311 @@
+{
+  "template_type": "architecture",
+  "style": 6,
+  "width": 1280,
+  "height": 820,
+  "style_overrides": {
+    "title_align": "center"
+  },
+  "title": "PRD Productivity Toolkit Workflow",
+  "subtitle": "Draft, review, and close the loop in Feishu/Lark with a real delivery gate",
+  "containers": [
+    {
+      "x": 44,
+      "y": 126,
+      "width": 268,
+      "height": 356,
+      "label": "Signal Intake",
+      "header_prefix": "01"
+    },
+    {
+      "x": 356,
+      "y": 126,
+      "width": 268,
+      "height": 356,
+      "label": "Draft Authoring",
+      "header_prefix": "02"
+    },
+    {
+      "x": 668,
+      "y": 126,
+      "width": 268,
+      "height": 356,
+      "label": "Quality Review",
+      "header_prefix": "03"
+    },
+    {
+      "x": 980,
+      "y": 126,
+      "width": 256,
+      "height": 356,
+      "label": "Collaboration Gate",
+      "header_prefix": "04"
+    },
+    {
+      "x": 44,
+      "y": 528,
+      "width": 1192,
+      "height": 170,
+      "label": "Foundation",
+      "header_prefix": "05"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "inputs",
+      "kind": "rect",
+      "x": 84,
+      "y": 250,
+      "width": 188,
+      "height": 78,
+      "label": "Business Inputs",
+      "sublabel": "briefs, calls, raw asks",
+      "type_label": "SIGNALS",
+      "fill": "#e9f1fb",
+      "stroke": "#8c6f5a",
+      "flat": true
+    },
+    {
+      "id": "create",
+      "kind": "double_rect",
+      "x": 386,
+      "y": 182,
+      "width": 208,
+      "height": 84,
+      "label": "create-prd-skill",
+      "sublabel": "L1-L4 scoped drafting",
+      "type_label": "AUTHORING",
+      "fill": "#f7ecda",
+      "stroke": "#d97757"
+    },
+    {
+      "id": "draft",
+      "kind": "document",
+      "x": 428,
+      "y": 308,
+      "width": 122,
+      "height": 116,
+      "label": "PRD Draft",
+      "sublabel": "chaptered structure",
+      "type_label": "OUTPUT",
+      "fill": "#fffcf7",
+      "stroke": "#8c6f5a",
+      "line_stroke": "#d0b893"
+    },
+    {
+      "id": "check",
+      "kind": "double_rect",
+      "x": 698,
+      "y": 182,
+      "width": 208,
+      "height": 84,
+      "label": "check-prd-skill",
+      "sublabel": "Path A / Path B review",
+      "type_label": "QUALITY",
+      "fill": "#cfe6df",
+      "stroke": "#7b8b5c"
+    },
+    {
+      "id": "findings",
+      "kind": "rect",
+      "x": 716,
+      "y": 332,
+      "width": 172,
+      "height": 68,
+      "label": "Findings Pack",
+      "sublabel": "gaps, risks, next steps",
+      "type_label": "OUTPUT",
+      "fill": "#efe8de",
+      "stroke": "#d0c3b3",
+      "flat": true
+    },
+    {
+      "id": "feishu",
+      "kind": "double_rect",
+      "x": 1002,
+      "y": 182,
+      "width": 212,
+      "height": 84,
+      "label": "Feishu Assistant",
+      "sublabel": "anchored comments + waivers",
+      "type_label": "LARK CLI",
+      "fill": "#e9f1fb",
+      "stroke": "#8c6f5a"
+    },
+    {
+      "id": "gate",
+      "kind": "hexagon",
+      "x": 1026,
+      "y": 326,
+      "width": 164,
+      "height": 84,
+      "label": "Delivery Gate",
+      "sublabel": "ready, revise, waive",
+      "type_label": "DECISION",
+      "fill": "#f4e4c1",
+      "stroke": "#d97757"
+    },
+    {
+      "id": "framework",
+      "kind": "rect",
+      "x": 272,
+      "y": 582,
+      "width": 736,
+      "height": 82,
+      "label": "prd-quality-framework",
+      "sublabel": "L1-L4, G1/G2/G3, chapter standards",
+      "type_label": "FOUNDATION",
+      "fill": "#e8e6e3",
+      "stroke": "#8f8a80",
+      "flat": true
+    }
+  ],
+  "arrows": [
+    {
+      "source": "inputs",
+      "target": "create",
+      "source_port": "right",
+      "target_port": "left",
+      "flow": "control",
+      "label": "shape"
+    },
+    {
+      "source": "create",
+      "target": "draft",
+      "source_port": "bottom",
+      "target_port": "top",
+      "flow": "control",
+      "label": "draft"
+    },
+    {
+      "source": "draft",
+      "target": "check",
+      "source_port": "right",
+      "target_port": "left",
+      "flow": "control",
+      "label": "review",
+      "route_points": [
+        [
+          596,
+          366
+        ],
+        [
+          640,
+          366
+        ],
+        [
+          640,
+          224
+        ]
+      ]
+    },
+    {
+      "source": "check",
+      "target": "findings",
+      "source_port": "bottom",
+      "target_port": "top",
+      "flow": "data",
+      "label": "find"
+    },
+    {
+      "source": "findings",
+      "target": "feishu",
+      "source_port": "right",
+      "target_port": "left",
+      "flow": "control",
+      "label": "anchor",
+      "route_points": [
+        [
+          908,
+          366
+        ],
+        [
+          956,
+          366
+        ],
+        [
+          956,
+          224
+        ]
+      ]
+    },
+    {
+      "source": "feishu",
+      "target": "gate",
+      "source_port": "bottom",
+      "target_port": "top",
+      "flow": "control",
+      "label": "decide"
+    },
+    {
+      "source": "framework",
+      "target": "create",
+      "source_port": "top",
+      "target_port": "left",
+      "flow": "read",
+      "route_points": [
+        [
+          330,
+          582
+        ],
+        [
+          330,
+          238
+        ]
+      ]
+    },
+    {
+      "source": "framework",
+      "target": "check",
+      "source_port": "top",
+      "target_port": "left",
+      "flow": "read",
+      "route_points": [
+        [
+          650,
+          582
+        ],
+        [
+          650,
+          224
+        ]
+      ]
+    },
+    {
+      "source": "framework",
+      "target": "feishu",
+      "source_port": "top",
+      "target_port": "left",
+      "flow": "read",
+      "route_points": [
+        [
+          968,
+          582
+        ],
+        [
+          968,
+          224
+        ]
+      ]
+    }
+  ],
+  "legend": [
+    {
+      "flow": "control",
+      "label": "Primary workflow"
+    },
+    {
+      "flow": "data",
+      "label": "Review findings"
+    },
+    {
+      "flow": "read",
+      "label": "Framework guidance"
+    }
+  ],
+  "legend_position": "bottom-right",
+  "legend_box": true,
+  "legend_box_fill": "#fffaf3",
+  "legend_y": 758,
+  "footer": ""
+}

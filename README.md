@@ -11,6 +11,15 @@ AI PRD generation, PRD review, and Feishu/Lark collaboration workflows for B2B p
 - **Feishu/Lark collaboration** for writing comments back, collecting decisions, and controlling a real delivery gate
 - **B2B product management** and **system design** workflows that respect complexity instead of forcing every requirement into the same template
 
+## Origins & Credits
+
+This toolkit is an integrated workflow product, but it does not erase where the core upstream skill work came from.
+
+- `create-prd-skill` in this repository builds on the original [pmYangKun/create-prd-skill](https://github.com/pmYangKun/create-prd-skill)
+- `check-prd-skill` in this repository builds on the original [pmYangKun/check-prd-skill](https://github.com/pmYangKun/check-prd-skill)
+
+Huge thanks to [pmYangKun](https://github.com/pmYangKun) for creating and open-sourcing the original `create-prd` and `check-prd` skill repositories. `PRD Productivity Toolkit` extends those foundations into a fuller end-to-end workflow with a vendored quality framework and a Feishu/Lark delivery gate.
+
 ## Who This Is For
 
 - Product managers writing B2B PRDs, solution specs, and internal system proposals
@@ -60,18 +69,9 @@ Best for:
 
 ## Architecture
 
-```mermaid
-flowchart LR
-  A["Raw Context<br/>briefs, meetings, ideas"] --> B["create-prd-skill<br/>draft generation"]
-  B --> C["PRD Draft"]
-  C --> D["check-prd-skill<br/>chapter review or fallback dimension review"]
-  D --> E["Issues, risks, recommendations"]
-  E --> F["feishu-prd-review-loop<br/>comment back + confirmation + waiver log"]
-  F --> G["Delivery Gate<br/>ready / not ready"]
-  H["prd-quality-framework<br/>L1-L4 + G1/G2/G3 + chapter standards"] --> B
-  H --> D
-  H --> F
-```
+![PRD Productivity Toolkit workflow](assets/diagrams/prd-productivity-loop.svg)
+
+The production prompt, structured diagram data, and exported assets for this workflow live in [`assets/diagrams/`](assets/diagrams/).
 
 ## Why This Design Is Different
 
@@ -137,12 +137,12 @@ That makes it useful for real team workflows where review history matters.
 
 ## Repository Layout
 
-```text
-create-prd-skill/         Complexity-aware AI PRD generation
-check-prd-skill/          Chapter-based review with fallback dimensions
-feishu-prd-review-loop/   Feishu/Lark review-to-delivery workflow
-prd-quality-framework/    Shared L1-L4 framework, chapter standards, and global checks
-```
+| Module | Purpose | Upstream Origin |
+| --- | --- | --- |
+| `create-prd-skill/` | Complexity-aware AI PRD generation | Based on [pmYangKun/create-prd-skill](https://github.com/pmYangKun/create-prd-skill) |
+| `check-prd-skill/` | Chapter-based review with fallback dimensions | Based on [pmYangKun/check-prd-skill](https://github.com/pmYangKun/check-prd-skill) |
+| `feishu-prd-review-loop/` | Feishu/Lark review-to-delivery workflow | Workflow variant aligned with the `check-prd-skill` Feishu collaboration branch |
+| `prd-quality-framework/` | Shared L1-L4 framework, chapter standards, and global checks | Packaged here as the first-class foundation of the toolkit |
 
 ## Roadmap
 
