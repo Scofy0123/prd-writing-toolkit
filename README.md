@@ -1,10 +1,10 @@
-# PRD Productivity Toolkit
+# PRD Writing Toolkit
 
 AI PRD generation, PRD review, and Feishu/Lark collaboration workflows for B2B product management and system design.
 
 > 中文简介：这是一套面向 B 端产品经理的 AI Native 工具链，把 **写 PRD、审 PRD、在飞书里协作收口** 串成一个真正可落地的闭环。
 
-`PRD Productivity Toolkit` is designed for teams that want more than a single prompt file. It turns product writing and review into a repeatable operating system:
+`PRD Writing Toolkit` is designed for teams that want more than a single prompt file. It turns product writing and review into a repeatable operating system:
 
 - **AI PRD generation** for turning raw context into structured drafts
 - **PRD review** for catching gaps, contradictions, and risk before handoff
@@ -18,7 +18,7 @@ This toolkit is an integrated workflow product, but it does not erase where the 
 - `create-prd-skill` in this repository builds on the original [pmYangKun/create-prd-skill](https://github.com/pmYangKun/create-prd-skill)
 - `check-prd-skill` in this repository builds on the original [pmYangKun/check-prd-skill](https://github.com/pmYangKun/check-prd-skill)
 
-Huge thanks to [pmYangKun](https://github.com/pmYangKun) for creating and open-sourcing the original `create-prd` and `check-prd` skill repositories. `PRD Productivity Toolkit` extends those foundations into a fuller end-to-end workflow with a vendored quality framework and a Feishu/Lark delivery gate.
+Huge thanks to [pmYangKun](https://github.com/pmYangKun) for creating and open-sourcing the original `create-prd` and `check-prd` skill repositories. `PRD Writing Toolkit` extends those foundations into a fuller end-to-end workflow with a vendored quality framework and a Feishu/Lark delivery gate.
 
 ## Who This Is For
 
@@ -69,7 +69,7 @@ Best for:
 
 ## Architecture
 
-![PRD Productivity Toolkit workflow](assets/diagrams/prd-productivity-loop.svg)
+![PRD Writing Toolkit workflow](assets/diagrams/prd-writing-loop.svg)
 
 The production prompt, structured diagram data, and exported assets for this workflow live in [`assets/diagrams/`](assets/diagrams/).
 
@@ -86,8 +86,8 @@ The production prompt, structured diagram data, and exported assets for this wor
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/Scofy0123/prd-productivity-toolkit.git
-cd prd-productivity-toolkit
+git clone https://github.com/Scofy0123/prd-writing-toolkit.git
+cd prd-writing-toolkit
 ```
 
 ### 2. Optionally install the canonical shared framework

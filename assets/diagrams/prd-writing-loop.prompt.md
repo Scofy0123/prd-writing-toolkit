@@ -1,6 +1,6 @@
-# Prompt for `fireworks-tech-graph`: PRD Productivity Toolkit Workflow
+# Prompt for `fireworks-tech-graph`: PRD Writing Toolkit Workflow
 
-Create a production-quality README diagram for the `PRD Productivity Toolkit` repository.
+Create a production-quality README diagram for the `PRD Writing Toolkit` repository.
 
 ## Objective
 
@@ -84,6 +84,6 @@ The diagram should make the toolkit feel like a professional product workflow, n
 
 ## Deliverables
 
-- `assets/diagrams/prd-productivity-loop.json`
-- `assets/diagrams/prd-productivity-loop.svg`
-- `assets/diagrams/prd-productivity-loop.png`
+- `assets/diagrams/prd-writing-loop.json`
+- `assets/diagrams/prd-writing-loop.svg`
+- `assets/diagrams/prd-writing-loop.png`

@@ -36,7 +36,7 @@
     </style>
   </defs>
   <rect width="1280.0" height="820.0" fill="#f8f6f3"/>
-  <text x="640.0" y="56" text-anchor="middle" class="title">PRD Productivity Toolkit Workflow</text>
+  <text x="640.0" y="56" text-anchor="middle" class="title">PRD Writing Toolkit Workflow</text>
   <text x="640.0" y="82" text-anchor="middle" class="subtitle">Draft, review, and close the loop in Feishu/Lark with a real delivery gate</text>
   <rect x="44.0" y="126.0" width="268.0" height="356.0" rx="16.0" fill="none" stroke="#ded8cf" stroke-width="1.4" stroke-dasharray="5 4"/>
   <text x="62.0" y="150.0" class="section">01 // SIGNAL INTAKE</text>

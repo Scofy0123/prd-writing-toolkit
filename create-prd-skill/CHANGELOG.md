@@ -10,7 +10,7 @@
 - **本地路径替换外部硬编码**：`SKILL.md` 改为从 `references/framework/` 渐进加载，不再依赖外部共享 framework 目录
 - **通用 Prompt 变为真正自包含**：`dist/create-prd-universal-prompt.md` 与 `dist/create-prd.skill` 重新内联框架文件，离线复制即可使用
 - **安装流程简化**：新增根目录安装脚本，直接安装整个 skill 目录
-- **完整工作流仓库**：README 增加 `PRD Productivity Toolkit` 独立仓库入口，便于获取 create/check/Feishu 协作的完整组合
+- **完整工作流仓库**：README 增加 `PRD Writing Toolkit` 独立仓库入口，便于获取 create/check/Feishu 协作的完整组合
 
 ## v2.0 (2026-04-17)
 

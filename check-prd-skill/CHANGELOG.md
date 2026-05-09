@@ -9,7 +9,7 @@
 - **内置 framework 快照**：新增 `references/framework/`，包含 L1-L4 判定、G1/G2/G3 全局检查和章节质量标准
 - **移除外部目录依赖**：`SKILL.md` 从本地 `references/framework/` 加载章节基线，不再依赖外部共享 framework 目录
 - **通用 Prompt 重新打包**：`dist/check-prd-universal-prompt.md` 现在包含 SKILL 流程、framework 文件、14 维降级文件和附录，单文件即可运行
-- **完整工作流入口**：README 增加 `PRD Productivity Toolkit` 链接，便于获取 create/check/Feishu 协作全套能力
+- **完整工作流入口**：README 增加 `PRD Writing Toolkit` 链接，便于获取 create/check/Feishu 协作全套能力
 
 ## v3.0.0（2026-04-17）
 

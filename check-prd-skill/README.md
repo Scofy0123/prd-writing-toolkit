@@ -100,7 +100,7 @@ bash install.sh
 
 如果你想直接拿到**生成 + 审查 + 飞书协作闭环**，可以使用完整工作流版仓库：
 
-- `PRD Productivity Toolkit`：<https://github.com/Scofy0123/prd-productivity-toolkit>
+- `PRD Writing Toolkit`：<https://github.com/Scofy0123/prd-writing-toolkit>
 
 ## 社区贡献
 
